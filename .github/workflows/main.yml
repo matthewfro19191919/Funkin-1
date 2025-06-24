@@ -24,9 +24,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4.1.7
+      - name: Checkout repo
+        uses: funkincrew/ci-checkout@v6
         with:
           submodules: 'recursive'
+      - name: Setup HXCPP dev commit
+        run: |
+          cd .haxelib/hxcpp/git/tools/hxcpp
+          haxe compile.hxml
+          cd ../../../../..
 
       - uses: krdlab/setup-haxe@master
         with:
@@ -55,7 +61,15 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4.1.7
+      - name: Checkout repo
+        uses: funkincrew/ci-checkout@v6
+        with:
+          submodules: 'recursive'
+      - name: Setup HXCPP dev commit
+        run: |
+          cd .haxelib/hxcpp/git/tools/hxcpp
+          haxe compile.hxml
+          cd ../../../../..
 
       - uses: krdlab/setup-haxe@master
         with:
@@ -83,7 +97,15 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4.1.7
+      - name: Checkout repo
+        uses: funkincrew/ci-checkout@v6
+        with:
+          submodules: 'recursive'
+      - name: Setup HXCPP dev commit
+        run: |
+          cd .haxelib/hxcpp/git/tools/hxcpp
+          haxe compile.hxml
+          cd ../../../../..
 
       - uses: krdlab/setup-haxe@master
         with:
