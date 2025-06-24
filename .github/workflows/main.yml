@@ -28,11 +28,6 @@ jobs:
         uses: funkincrew/ci-checkout@v6
         with:
           submodules: 'recursive'
-      - name: Setup HXCPP dev commit
-        run: |
-          cd .haxelib/hxcpp/git/tools/hxcpp
-          haxe compile.hxml
-          cd ../../../../..
 
       - uses: krdlab/setup-haxe@master
         with:
@@ -65,11 +60,6 @@ jobs:
         uses: funkincrew/ci-checkout@v6
         with:
           submodules: 'recursive'
-      - name: Setup HXCPP dev commit
-        run: |
-          cd .haxelib/hxcpp/git/tools/hxcpp
-          haxe compile.hxml
-          cd ../../../../..
 
       - uses: krdlab/setup-haxe@master
         with:
@@ -101,11 +91,6 @@ jobs:
         uses: funkincrew/ci-checkout@v6
         with:
           submodules: 'recursive'
-      - name: Setup HXCPP dev commit
-        run: |
-          cd .haxelib/hxcpp/git/tools/hxcpp
-          haxe compile.hxml
-          cd ../../../../..
 
       - uses: krdlab/setup-haxe@master
         with:
